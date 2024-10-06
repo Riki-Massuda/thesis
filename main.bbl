@@ -1,0 +1,36 @@
+\begin{thebibliography}{10}
+
+\bibitem{Keisansho2024}
+経済産業省資源エネルギー庁：今後の再生可能エネルギー政策について (2024).
+
+\bibitem{Minkankyuyo2022}
+国税庁長官官房企画課：令和4年分調査結果報告, 民間給与実態統計調査 (2023).
+
+\bibitem{Nogyokeiei2024}
+農林水産省経営・構造統計課：調査結果の概要, 令和4年営農類型別経営統計 (2024).
+
+\bibitem{Noringyo2020}
+農林水産省センサス統計室：調査結果の概要, 2020農林業センサス (2021).
+
+\bibitem{Kochimenseki2023}
+農林水産省：令和5年耕地面積 (2023).
+
+\bibitem{Engeishisetsu2022}
+農林水産省：園芸用施設の設置等の状況 (2022).
+
+\bibitem{Safat2022}
+{Safat Dipta},~S., Schoenlaub,~J., {Habibur Rahaman},~M. and Uddin,~A.: Estimating the potential for semitransparent organic solar cells in agrophotovoltaic greenhouses, {\em Applied Energy}, Vol. 328, p. 120208 (2022).
+
+\bibitem{Bifacialradiance}
+Pelaez,~S.~A. and Deline,~C.: bifacial radiance: a python package for modeling bifacial solar photovoltaic systems, {\em Journal of Open Source Software}, Vol.~5, No.~50, p. 1865 (2020).
+
+\bibitem{MATLAB}
+Inc.,~T.~M.: MATLAB version: 24.1 (R2024a) (2024).
+
+\bibitem{strawberry2010}
+松尾尚典, 越川兼行：イチゴ高設栽培の環境調節による省エネルギー栽培技術, 岐阜県農業技術センター研究報告, No.~10, pp. 10--15 (2010).
+
+\bibitem{Cop2013}
+後藤文之, 庄子和博, 間野英行, 花形将司：温室における空気熱源式ヒートポンプCOPの連続測定, 農業施設, Vol.~44, No.~3, pp. 25--31 (2013).
+
+\end{thebibliography}

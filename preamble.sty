@@ -1,0 +1,84 @@
+\usepackage{hyperref}
+\usepackage{pxjahyper}
+\hypersetup{
+    setpagesize=false,
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black,
+}
+
+\usepackage{xcolor}
+
+\usepackage{graphicx}
+\graphicspath{{./fig/}}
+
+\usepackage{tikz}
+\usepackage{tikzscale}
+\usepackage{pgfplots}
+\usepackage{grffile}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{arrows.meta}
+\usepgfplotslibrary{patchplots}
+\pgfplotsset{compat=newest}
+\pgfplotsset{tick scale binop=\times}
+\pgfplotsset{/pgf/number format/fixed}
+\pgfplotsset{/pgf/number format/precision=3}
+\pgfplotsset{/pgf/number format/1000 sep=}
+\pgfplotsset{scale ticks above exponent=1}
+\pgfplotsset{scale ticks below exponent=-1}
+\tikzset{every path/.style={line join=round, line cap=round}}
+\DeclareDocumentCommand{\drawline}{m O{1pt}}{\protect\tikz[baseline=-0.55ex]\protect\draw[#1,line width=#2](0,0)--(10pt,0);}
+\DeclareDocumentCommand{\drawmark}{m O{0.5ex}}{\protect\tikz[baseline=-0.55ex]\protect\draw plot[only marks,mark=#1,mark size=#2](0,0);}
+\newlength\figurewidth
+\newlength\figureheight
+\setlength{\figurewidth}{120pt}
+\setlength{\figureheight}{60pt}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{booktabs}
+\usepackage{fontawesome}
+\usepackage{listings}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{url}
+
+\definecolor{matlab_k}{rgb}{0,0,0}
+\definecolor{matlab_r}{rgb}{1,0,0}
+\definecolor{matlab_g}{rgb}{0,1,0}
+\definecolor{matlab_b}{rgb}{0,0,1}
+\definecolor{matlab_y}{rgb}{1,1,0}
+\definecolor{matlab_m}{rgb}{1,0,1}
+\definecolor{matlab_c}{rgb}{0,1,1}
+\definecolor{matlab_w}{rgb}{1,1,1}
+
+\definecolor{matlab_blue}{rgb}{0.000,0.447,0.714}
+\definecolor{matlab_red}{rgb}{0.850,0.325,0.098}
+\definecolor{matlab_orange}{rgb}{0.929,0.694,0.125}
+\definecolor{matlab_purple}{rgb}{0.494,0.184,0.556}
+\definecolor{matlab_green}{rgb}{0.466,0.674,0.188}
+\definecolor{matlab_cyan}{rgb}{0.301,0.745,0.933}
+\definecolor{matlab_brown}{rgb}{0.635,0.078,0.184}
+
+\definecolor{cud_red}{rgb}{1,0.294,0}
+\definecolor{cud_yellow}{rgb}{1,0.945,0}
+\definecolor{cud_green}{rgb}{0.012,0.686,0.478}
+\definecolor{cud_blue}{rgb}{0,0.353,1}
+\definecolor{cud_sky}{rgb}{0.302,0.769,1}
+\definecolor{cud_pink}{rgb}{1,0.502,0.510}
+\definecolor{cud_orange}{rgb}{0.965,0.667,0}
+\definecolor{cud_purple}{rgb}{0.6,0,0.6}
+\definecolor{cud_brown}{rgb}{0.502,0.251,0}
+
+\newcommand{\fig}[1]{\figurename~\ref{fig:#1}}
+\newcommand{\tab}[1]{\tablename~\ref{tab:#1}}
+\newcommand{\eq}[1]{(\ref{eq:#1})}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table}
