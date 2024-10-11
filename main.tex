@@ -114,7 +114,46 @@ Safatらの研究におけるシミュレーションでは、トマトの生育
     \item 経済性を最大化させるように温室内の環境制御や電力運用、太陽光パネルの設置方法などの改善を図る
 \end{enumerate}
 
-\section{シミュレーション環境}
+
+\section{温室の設計}
+\subsection{温室の設置場所と規格}
+シミュレーションを行うにあたって、まずは温室の設置場所と設計を決定した。設置場所は取得可能な気象データの場所から茨城県つくば市とした。
+
+続いて、温室の向きを決定する。北緯30\(^\circ\)から45\(^\circ\)に位置する日本では、東西棟の方が冬季における日射透過率は南北棟よりも10\%前後高いものの、日射が不均一になるという欠点がある。その一方で、南北棟は冬季以外では東西棟の日射透過率を上回り、さらには屋根傾斜角や連棟数がほとんど日射透過率に影響しない。これらの理由から南北棟の温室が多くなっている\cite{Samejima2021}とのことであったのため、本研究でも南北棟を採用することとした。
+
+両屋根型の単棟とし、規格は\tab{housedesign}に示すパラメータを用いた。
+
+\begin{table}[ht]
+    \caption{温室の規格}
+    \label{tab:housedesign}
+    \centering
+    \begin{tabular}{lcrrrrc}
+        \toprule % --- booktabs: 上の罫線 ---
+        項目 & 値\\
+        \midrule % --- booktabs: 中間の罫線 ---
+        東西方向の長さ & 10 m\\
+        南北方向の長さ & 30 m\\
+        軒高 & 4 m\\
+        屋根傾斜角 & 40 \(^\circ\)\\
+        \bottomrule % --- booktabs: 底の罫線 ---
+    \end{tabular}
+\end{table}
+
+
+\fig{bifacialPV}はbifacial\_radiance上で設計した、温室に設置されたPV部分の模型であり、南北の屋根側面の三角形部分以外の全ての面に両面PVを設置することとした。
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\linewidth]{fig/PVmodel.png}
+    \caption{温室に設置された両面PV}
+    \label{fig:bifacialPV}
+\end{figure}
+
+\subsection{温室内外の設備}
+あいうえお
+
+\section{シミュレーションモデル}
+\subsection{シミュレーション環境}
 気象データから太陽光パネルが受ける日射量を算出する部分では、NRELが提供するbifacial\_radianceを用いている。bifacial\_radianceは、レイトレーシングによって両面PVシステムのパフォーマンスのシミュレーションを行うことができるpythonのパッケージである\cite{Bifacialradiance}。
 
 温室内の環境と必要な制御を算出する部分では、MathWorksが提供するMATLAB Simulinkを用いている\cite{MATLAB}。視覚的なブロック線図によりシミュレーションの構造の把握が比較的容易となる。\fig{Simulink}は現時点で構成されているモデルの全体像である。
@@ -127,36 +166,7 @@ Safatらの研究におけるシミュレーションでは、トマトの生育
 \end{figure}
 
 
-\section{温室の設計}
-シミュレーションを行うにあたって、まずは温室の設置場所と設計を決定した。設置場所は取得可能な気象データの場所から茨城県つくば市とした。また温室の設計は\tab{housedesign}に示すパラメータを用いた。
-
-\begin{table}[ht]
-    \caption{温室の設計}
-    \label{tab:housedesign}
-    \centering
-    \begin{tabular}{lcrrrrc}
-        \toprule % --- booktabs: 上の罫線 ---
-        項目 & 値\\
-        \midrule % --- booktabs: 中間の罫線 ---
-        東西方向の長さ & 10 m\\
-        南北方向の長さ & 30 m\\
-        屋根を除く高さ & 4 m\\
-        屋根の傾き & 40 \(^\circ\)\\
-        \bottomrule % --- booktabs: 底の罫線 ---
-    \end{tabular}
-\end{table}
-
-
-\fig{bifacialPV}はbifacial\_radiance上で設計した、温室に設置されたPV部分の模型であり、南北の屋根側面の三角形部分以外の全ての面に両面PVを設置することとした。
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.9\linewidth]{fig/PVmodel.png}
-    \caption{温室に設置された両面PV}
-    \label{fig:bifacialPV}
-\end{figure}
-
-\section{太陽光発電の発電電力}
+\subsection{太陽光発電の発電電力}
 太陽光発電の発電電力\(P_{\text{PV}}\)は、bifacial\_radianceによって求められた太陽光パネルに当たる日射量に一定の発電効率\(\eta\)を乗算することで求めた。
 太陽光パネルの各面に当たる日射強度と各面の面積を、
 \begin{itemize}
@@ -175,7 +185,7 @@ Safatらの研究におけるシミュレーションでは、トマトの生育
 \end{align}
 
 
-\section{温室内の温度}
+\subsection{温室内の温度}
 温室内の温度は、
 \begin{itemize}
     \item \(Q_\text{flow}\): 熱貫流による熱エネルギーの出入り
@@ -255,6 +265,21 @@ Safatらの研究におけるシミュレーションでは、トマトの生育
     \item 温室内環境の制御機構の拡張: 現時点ではヒーターでの加温のみを考慮しているが、実際の栽培により近づけるためには土を温める仕組みや日照時間を補填するための電灯についても考慮に入れ、作物の生育条件を満たす環境を整備する必要がある。
     \item レイトレーシングの精度向上: 現時点では簡易的な太陽光パネルの設置のみでレイトレーシングを行い日射強度を算出しているが、実際は作物や温室内の設備が存在することによる影響があるため、より精密なシミュレーションのためには、詳細な環境を組み込む必要がある。
     \item 発電電力の運用方法の検討: 現時点では発電電力の具体的な運用方法については検討できていないが、経済性の評価に至るには瞬時的な自家消費や売電、さらには蓄熱・蓄電を考慮した運用モデルを決定することが必要となる。
+\end{itemize}
+
+\chapter{メモ}
+\begin{itemize}
+    \item 最大暖房負荷\(Q_\text{h}\): 外気温が最も低下し、晴天で放射冷却が大きい場合に必要な暖房熱量\cite{Samejima2021}。
+    \begin{itemize}
+        \item \(Q_\text{h} = A_\text{s} (T_\text{i} - T_\text{o}) U_\text{0} (1 - f_\text{r}) f_\text{w}\)
+        \item \(A_\text{s}\): 温室の表面積（m\(^2\)）
+        \item \(T_\text{i}\): 室内気温（\(^\circ \text{C}\)）
+        \item \(T_\text{o}\): 外気温（\(^\circ \text{C}\)）
+        \item \(U_\text{0}\): 一重被覆における暖房負荷係数（熱貫流, 換気伝熱, 地中伝熱を含んだ係数で、ガラス温室の場合6.2、塩化ビニル温室の場合6.6 W\(\cdot\)m\(^{-2}\cdot ^\circ \text{C}^{-1}\)
+        \item \(f_\text{r}\): 保温被覆を行う場合の熱節減率
+        \item \(f_\text{w}\): 風速の補正係数（通常は1.0,  強風地域では1.1）
+        \item 暖房負荷は容積ではなく表面積に比例する
+    \end{itemize}
 \end{itemize}
 
 \backmatter

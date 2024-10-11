@@ -1,10 +1,10 @@
-This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.uptex) (TeX Live 2024) (preloaded format=uplatex 2024.6.20)  27 SEP 2024 09:57
+This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.uptex) (TeX Live 2024) (preloaded format=uplatex 2024.6.20)  6 OCT 2024 15:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/masudariki/Documents/MatsuhashiLabo/2024InterimReport/thesis/main.tex
-(/Users/masudariki/Documents/MatsuhashiLabo/2024InterimReport/thesis/main.tex
+**/Users/masudariki/Documents/MatsuhashiLabo/2024FinalReport/thesis/main.tex
+(/Users/masudariki/Documents/MatsuhashiLabo/2024FinalReport/thesis/main.tex
 pLaTeX2e <2023-02-14u04>+1, based on
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1119,26 +1119,37 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 [4
 
 ]
-File: fig/Simulink.png Graphic file (type bmp)
-<fig/Simulink.png>
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 13.31583pt on input line 119.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 13.31583pt on input line 119.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 14.39996pt on input line 119.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 13.31583pt on input line 119.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 13.31583pt on input line 119.
 File: fig/PVmodel.png Graphic file (type bmp)
 <fig/PVmodel.png>
-LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 7.76752pt on input line 160.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.39993pt on input line 160.
-LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 5.54826pt on input line 160.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.99998pt on input line 160.
  [5]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 163.
+File: fig/Simulink.png Graphic file (type bmp)
+<fig/Simulink.png>
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 7.76752pt on input line 170.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.39993pt on input line 170.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 5.54826pt on input line 170.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.99998pt on input line 170.
+ [6]
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 173.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 11.99997pt on input line 163.
- [6] [7] [8]
+(Font)              scaled to size 11.99997pt on input line 173.
+ [7] [8]
 第3章
 File: fig/Qin-Temp.jpg Graphic file (type bmp)
 <fig/Qin-Temp.jpg>
@@ -1151,6 +1162,24 @@ File: fig/Qintotal.jpg Graphic file (type bmp)
 第4章
 [11
 
+]
+第5章
+LaTeX Font Info:    Font shape `JT2/mc/b/n' in size <11.99997> not available
+(Font)              Font shape `JT2/mc/bx/n' tried instead on input line 274.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <11.99997> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 274.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 11.09653pt on input line 274.
+LaTeX Font Info:    Font shape `JY2/mc/b/n' in size <11.99997> not available
+(Font)              Font shape `JY2/mc/bx/n' tried instead on input line 274.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <11.99997> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 274.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 11.09653pt on input line 274.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 11.99997pt on input line 274.
+[12
+
 ] (./main.bbl
 LaTeX Font Info:    Font shape `JT2/gt/m/it' in size <11.99997> not available
 (Font)              Font shape `JT2/gt/m/n' tried instead on input line 22.
@@ -1162,7 +1191,7 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 11.09653pt on input line 22.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 11.99997pt on input line 22.
-) [12
+) [13
 
 
 ] (./main.aux)
@@ -1172,15 +1201,15 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 17A8A5B186BD249BFA24909C4703ECAE;2431.
+(rerunfilecheck)             Checksum: 7B0B86FB518BFD3959D7F71859E2D048;2245.
  ) 
 Here is how much of TeX's memory you used:
- 44157 strings out of 474774
- 1018926 string characters out of 5758802
- 1931032 words of memory out of 5000000
- 65796 multiletter control sequences out of 15000+600000
- 654183 words of font info for 123 fonts, out of 8000000 for 9000
+ 44169 strings out of 474774
+ 1019137 string characters out of 5758802
+ 1932032 words of memory out of 5000000
+ 65807 multiletter control sequences out of 15000+600000
+ 663279 words of font info for 130 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 99i,14n,126p,1059b,1169s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,14n,126p,1057b,1169s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.dvi (14 pages, 53440 bytes).
+Output written on main.dvi (15 pages, 56136 bytes).
