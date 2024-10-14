@@ -24,6 +24,9 @@
 \usepackage{layout} % レイアウト確認
 \usepackage{pdfpages} % 表紙PDF挿入
 
+\usepackage{mhchem}
+\usepackage{siunitx}
+
 \begin{document}
 
 % \layout % レイアウト確認
@@ -222,6 +225,60 @@ Safatらの研究におけるシミュレーションでは、トマトの生育
 \end{align}
 
 シミュレーションでは、ヒーターの出力を調整することで、温室内の温度が対象作物の生育条件に適した温度となるようにする。
+
+\subsection{温室内の湿り空気}
+\begin{table}[ht]
+    \caption{各定数の記号と数値}
+    \label{tab:constant}
+    \centering
+    \begin{tabular}{llllrrc}
+        \toprule % --- booktabs: 上の罫線 ---
+        項目 & 記号 & 数値 & 単位\\
+        \midrule % --- booktabs: 中間の罫線 ---
+        気体定数 & \(\mathrm{R}\) & 8.3143 & \(\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{mol}^{-1}\) \\
+        乾き空気と湿り空気の分子量 & \(\mathrm{M_a}\) & 28.96 & \\
+        乾き空気の気体定数 & \(\mathrm{R_d}\) & 287.09 & \(\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{kg}^{-1}\)\\
+        乾き空気の定圧比熱 & \(\mathrm{C_p}\) & 1004 & \(\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{kg}^{-1}\)\\
+        水蒸気の気体定数 & \(\mathrm{R_w}\) & 461 & \(\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{kg}^{-1}\)\\
+        水蒸気の定圧比熱 & \(\mathrm{C_{pw}}\) & 1952 & \(\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{kg}^{-1}\)\\
+        水の蒸発潜熱（\(0^\circ C\)） & \(\mathrm{L_w}\) & 2.500\(\times\)106 & \(\mathrm{J}\cdot\mathrm{kg^{-1}}\)\\
+        水の融解潜熱（\(0^\circ C\)） & \(\mathrm{L_l}\) & 3.34\(\times\)105 &  \si{J.kg^{-1}}\(\mathrm{J}\cdot\mathrm{kg^{-1}}\)\\
+        水の昇華潜熱（\(0^\circ C\)） & \(\mathrm{L_i}\) & 2.83\(\times\)105 & \si{J.kg^{-1}}\\
+        \bottomrule % --- booktabs: 底の罫線 ---
+    \end{tabular}
+\end{table}
+
+\subsection{二酸化炭素濃度}
+\begin{align}
+    V\frac{\mathrm{d}C_{\mathrm{in}}}{\mathrm{d}t} = R_\mathrm{soil} - (P - R_\mathrm{plant}) + N V (C_\mathrm{out} - C_\mathrm{in}) + S
+    \label{eq:co2flow}
+\end{align}
+
+\begin{table}[ht]
+    \caption{変数}
+    \label{tab:variables}
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        項目 & 記号 & 単位 \\
+        \midrule
+        温室内空気の容積 & \(V\) & \si{mol} \\
+        温室内の\ce{CO2}濃度 & \(C_\mathrm{in}\) & \si{mol.mol^{-1}} \\
+        温室外の\ce{CO2}濃度 & \(C_\mathrm{out}\) & \si{mol.mol^{-1}} \\
+        温室当たりの土壌呼吸速度 & \(R_\mathrm{soil}\) & \si{mol.h^{-1}} \\
+        温室当たりの植物体の呼吸速度 & \(R_\mathrm{plant}\) & \si{mol.h^{-1}} \\
+        \bottomrule
+        
+    \end{tabular}
+\end{table}
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.9\linewidth]{fig/co2flow.png}
+    \caption{温室内\ce{CO2}濃度に影響する各種\ce{CO2}ガスのフローの模式図}
+    \label{fig:co2flow}
+\end{figure}
 
 
 \section{作物の生育条件}

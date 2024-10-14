@@ -416,6 +416,10 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pdfpages/ppdvipdfmx.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pdfpages/ppdvipdfmx.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pdfpages/ppdvipdfmx.def
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mhchem/mhchem.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mhchem/mhchem.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/chemgreek/chemgreek.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/chemgreek/chemgreek.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
@@ -546,17 +550,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
-INPUT ./fig/Qin-Temp.jpg
-INPUT ./fig/Qin-Temp.jpg
-INPUT extractbb -B cropbox -O fig/Qin-Temp.jpg
-INPUT ./fig/Qintotal.jpg
-INPUT ./fig/Qintotal.jpg
-INPUT extractbb -B cropbox -O fig/Qintotal.jpg
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
-INPUT ./main.bbl
-INPUT ./main.bbl
-INPUT main.bbl
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm
-INPUT main.aux
-INPUT ./main.out
-INPUT ./main.out
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm0800.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm
