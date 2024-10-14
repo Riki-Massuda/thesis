@@ -25,7 +25,8 @@
 \usepackage{pdfpages} % 表紙PDF挿入
 
 \usepackage{mhchem}
-\usepackage{siunitx}
+\usepackage{siunitx} % SI単位系
+\sisetup{inter-unit-product = \ensuremath{\cdot}} % 単位の乗算にcdotを使用
 
 \begin{document}
 
@@ -235,15 +236,15 @@ Safatらの研究におけるシミュレーションでは、トマトの生育
         \toprule % --- booktabs: 上の罫線 ---
         項目 & 記号 & 数値 & 単位\\
         \midrule % --- booktabs: 中間の罫線 ---
-        気体定数 & \(\mathrm{R}\) & 8.3143 & \(\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{mol}^{-1}\) \\
+        気体定数 & \(\mathrm{R}\) & 8.3143 & \si{J.K^{-1}.mol^{-1}} \\
         乾き空気と湿り空気の分子量 & \(\mathrm{M_a}\) & 28.96 & \\
-        乾き空気の気体定数 & \(\mathrm{R_d}\) & 287.09 & \(\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{kg}^{-1}\)\\
-        乾き空気の定圧比熱 & \(\mathrm{C_p}\) & 1004 & \(\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{kg}^{-1}\)\\
-        水蒸気の気体定数 & \(\mathrm{R_w}\) & 461 & \(\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{kg}^{-1}\)\\
-        水蒸気の定圧比熱 & \(\mathrm{C_{pw}}\) & 1952 & \(\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{kg}^{-1}\)\\
-        水の蒸発潜熱（\(0^\circ C\)） & \(\mathrm{L_w}\) & 2.500\(\times\)106 & \(\mathrm{J}\cdot\mathrm{kg^{-1}}\)\\
-        水の融解潜熱（\(0^\circ C\)） & \(\mathrm{L_l}\) & 3.34\(\times\)105 &  \si{J.kg^{-1}}\(\mathrm{J}\cdot\mathrm{kg^{-1}}\)\\
-        水の昇華潜熱（\(0^\circ C\)） & \(\mathrm{L_i}\) & 2.83\(\times\)105 & \si{J.kg^{-1}}\\
+        乾き空気の気体定数 & \(\mathrm{R_d}\) & 287.09 & \si{J.K^{-1}.kg^{-1}} \\
+        乾き空気の定圧比熱 & \(\mathrm{C_p}\) & 1004 & \si{J.K^{-1}.kg^{-1}} \\
+        水蒸気の気体定数 & \(\mathrm{R_w}\) & 461 & \si{J.K^{-1}.kg^{-1}} \\
+        水蒸気の定圧比熱 & \(\mathrm{C_{pw}}\) & 1952 & \si{J.K^{-1}.kg^{-1}} \\
+        水の蒸発潜熱（\SI{0}{\degreeCelsius}） & \(\mathrm{L_w}\) & 2.500\(\times\)106 & \si{J.kg^{-1}}\\
+        水の融解潜熱（\SI{0}{\degreeCelsius}） & \(\mathrm{L_l}\) & 3.34\(\times\)105 &  \si{J.kg^{-1}}\\
+        水の昇華潜熱（\SI{0}{\degreeCelsius}） & \(\mathrm{L_i}\) & 2.83\(\times\)105 & \si{J.kg^{-1}}\\
         \bottomrule % --- booktabs: 底の罫線 ---
     \end{tabular}
 \end{table}
@@ -265,8 +266,11 @@ Safatらの研究におけるシミュレーションでは、トマトの生育
         温室内空気の容積 & \(V\) & \si{mol} \\
         温室内の\ce{CO2}濃度 & \(C_\mathrm{in}\) & \si{mol.mol^{-1}} \\
         温室外の\ce{CO2}濃度 & \(C_\mathrm{out}\) & \si{mol.mol^{-1}} \\
-        温室当たりの土壌呼吸速度 & \(R_\mathrm{soil}\) & \si{mol.h^{-1}} \\
-        温室当たりの植物体の呼吸速度 & \(R_\mathrm{plant}\) & \si{mol.h^{-1}} \\
+        温室当たりの土壌呼吸速度 & \(R_\mathrm{soil}\) & \si{\micro mol.h^{-1}} \\
+        温室当たりの植物体の呼吸速度 & \(R_\mathrm{plant}\) & \si{\micro mol.h^{-1}} \\
+        温室当たりの植物体の総光合成速度 & \(P\) & \si{\micro mol.h^{-1}} \\
+        温室の換気回数 & \(N\) & \si{h^{-1}} \\
+        温室当たりの\ce{CO2}施用速度 & \(S\) & \si{\micro mol.h^{-1}} \\
         \bottomrule
         
     \end{tabular}
@@ -280,9 +284,9 @@ Safatらの研究におけるシミュレーションでは、トマトの生育
     \label{fig:co2flow}
 \end{figure}
 
-
+\clearpage
 \section{作物の生育条件}
-本研究ではイチゴの施設栽培を例にとり、シミュレーションを行うこととした。岐阜県農業技術センターの研究報告\cite{strawberry2010}によると、イチゴを温室で栽培する際に昼間は28 \(^\circ\)Cとし、夜間は最低温度を5 \(^\circ\)Cとすると省エネルギーな栽培となるという結果が得られていたため、本研究も同じ温度設定を採用し、簡易的に温室内の温度を6時から18時を28 \(^\circ\)C、18時から6時を5 \(^\circ\)Cと設定した。
+本研究ではイチゴの施設栽培を例にとり、シミュレーションを行うこととした。岐阜県農業技術センターの研究報告\cite{strawberry2010}によると、イチゴを温室で栽培する際に昼間は\SI{28}{\degreeCelsius}とし、夜間は最低温度を\SI{5}{\degreeCelsius}とすると省エネルギーな栽培となるという結果が得られていたため、本研究も同じ温度設定を採用し、簡易的に温室内の温度を6時から18時を\SI{28}{\degreeCelsius}、18時から6時を\SI{5}{\degreeCelsius}と設定した。
 
 \chapter{結果}
 以下に示すのは、茨城県つくば市においてイチゴの施設栽培を行う際の、2023年12月1日分のシミュレーション結果である。
@@ -337,6 +341,7 @@ Safatらの研究におけるシミュレーションでは、トマトの生育
         \item \(f_\text{w}\): 風速の補正係数（通常は1.0,  強風地域では1.1）
         \item 暖房負荷は容積ではなく表面積に比例する
     \end{itemize}
+    \item 参考にしたい論文執筆の規範（https://qiita.com/suigin/items/10960e516f2d44f6b6de）
 \end{itemize}
 
 \backmatter
