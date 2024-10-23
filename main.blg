@@ -8,46 +8,46 @@ Warning--empty journal in Kochimenseki2023
 Warning--empty journal in Engeishisetsu2022
 Warning--empty journal in MATLAB
 Warning--there's a number but no volume in strawberry2010
-You've used 12 entries,
+You've used 14 entries,
             2322 wiz_defined-function locations,
-            618 strings with 5344 characters,
-and the built_in function-call counts, 3214 in all, are:
-= -- 225
-> -- 72
-< -- 10
-+ -- 32
-- -- 20
-* -- 126
-:= -- 371
-add.period$ -- 12
-call.type$ -- 12
+            630 strings with 5526 characters,
+and the built_in function-call counts, 3765 in all, are:
+= -- 263
+> -- 80
+< -- 13
++ -- 36
+- -- 22
+* -- 148
+:= -- 429
+add.period$ -- 14
+call.type$ -- 14
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 250
-empty$ -- 355
-format.name$ -- 40
-if$ -- 823
+cite$ -- 19
+duplicate$ -- 296
+empty$ -- 423
+format.name$ -- 44
+if$ -- 969
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 13
-newline$ -- 39
-num.names$ -- 12
-pop$ -- 115
+int.to.str$ -- 14
+missing$ -- 16
+newline$ -- 45
+num.names$ -- 14
+pop$ -- 138
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 262
+skip$ -- 303
 stack$ -- 0
-substring$ -- 60
-swap$ -- 44
-text.length$ -- 10
+substring$ -- 72
+swap$ -- 51
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 5
-while$ -- 18
-width$ -- 14
-write$ -- 98
-is.kanji.str$ -- 146
+while$ -- 22
+width$ -- 16
+write$ -- 115
+is.kanji.str$ -- 170
 (There were 5 warnings)
